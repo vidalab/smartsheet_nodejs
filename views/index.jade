@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+
+  if user
+    p Hello #{user.first_name} #{user.last_name}!
+    br
+    br
+    a.btn.btn-primary(href='/logout') Logout
+  else
+    a.btn.btn-primary(href='/auth/smartsheet') Login with Smartsheet
